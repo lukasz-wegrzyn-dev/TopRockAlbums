@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
@@ -102,7 +103,7 @@ protocol DetailViewing: class {
 extension DetailViewController: DetailViewing {
     func updateData(viewModel: DetailViewController.ViewModel) {
         if let urlStr = viewModel.imageStr, let url = URL(string: urlStr) {
-            self.imageView.load(url: url)
+            self.imageView.sd_setImage(with: url, completed: nil)
             let attrStr = NSAttributedString.concat([
                 NSAttributedString.normal(str: "\(NSLocalizedString("ALBUM", comment: ""))\n", fontSize: 15.0, color: .gray),
                 NSAttributedString.bold(str: "\(viewModel.title ?? "")\n\n", fontSize: 20.0),

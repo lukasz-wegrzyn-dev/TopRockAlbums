@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ImageCacher {
+fileprivate class ImageCacher {
     static let shared = ImageCacher()
     private var cache: [String: UIImage] = [:]
     

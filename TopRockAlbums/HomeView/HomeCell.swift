@@ -25,9 +25,10 @@ class HomeCell: UITableViewCell {
     func update(viewModel: ViewModel) {
         self.titleLabel.text = "\(viewModel.rank). \(viewModel.title)"
         self.iconImageView.image = UIImage(named: "noimage")
-        if let imageUrl = viewModel.imageUrl, let url = URL(string: imageUrl) {
-            self.iconImageView.load(url: url)
+        if let imageUrl = viewModel.imageUrl {
+            self.iconImageView.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "noimage"))
         }
+        
         self.favouriteIndicator.tintColor = viewModel.isFavourite ? UIColor(named: "cGold") : UIColor(named: "cGray")
     }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,6 +50,7 @@
 		FE77AA1024C93B3100997143 /* TracksViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77AA0F24C93B3100997143 /* TracksViewPresenterTests.swift */; };
 		FE77AA1224C93B4400997143 /* TracksViewInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77AA1124C93B4400997143 /* TracksViewInteractorTests.swift */; };
 		FE77AA1424C9583500997143 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE77AA1324C9583500997143 /* Tag.swift */; };
+		FE7F42D024F4916E00E7245C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FE7F42CF24F4916E00E7245C /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7F42D024F4916E00E7245C /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +281,9 @@
 			dependencies = (
 			);
 			name = TopRockAlbums;
+			packageProductDependencies = (
+				FE7F42CF24F4916E00E7245C /* SDWebImage */,
+			);
 			productName = HsbcDemo;
 			productReference = FE5FC0E424C368B10024A524 /* TopRockAlbums.app */;
 			productType = "com.apple.product-type.application";
@@ -329,6 +334,9 @@
 				Base,
 			);
 			mainGroup = FE5FC0DB24C368B10024A524;
+			packageReferences = (
+				FE7F42CE24F4916E00E7245C /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = FE5FC0E524C368B10024A524 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -667,6 +675,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FE7F42CE24F4916E00E7245C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE7F42CF24F4916E00E7245C /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE7F42CE24F4916E00E7245C /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FE5FC0DC24C368B10024A524 /* Project object */;
 }
